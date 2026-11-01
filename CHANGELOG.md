@@ -3,44 +3,110 @@
 Unofficial That Sky Mod (TSM) builds for Sky: Children of the Light on Android (Canvas / Sky Modloader).
 All credits for the mod go to the original TSM makers.
 
+This list covers every change made in the source repository (That-Sky-Mod-Temp-Updates, private),
+grouped by version. "Behind the scenes" items don't change how the mod works in the game.
+
+---
+
 ## 0.25.7 — Sky 0.35.2 (2026-11-01)
 
-- Updates now come from this repository: tap the mod's update button in Canvas to get new versions.
-  Install 0.25.7 by hand once; later versions arrive through Canvas.
+- Updates now come from this public repository (That-Sky-Mod-RE): tap the mod's update button in Canvas
+  to get new versions. Install 0.25.7 by hand once; later versions arrive through Canvas.
+
+**Behind the scenes**
+- Mod's update link changed to `books4jy-art/That-Sky-Mod-RE` releases.
+- Releases are published by a workflow in this repository when `libTSM.so` and `VERSION` change.
+- The release workflow in the source repository was removed, so releases come from one place only.
+- Source README: new "Publishing an update" steps.
 
 ## 0.25.6 — Sky 0.35.2 (2026-11-01)
 
-- **Official game names:** spells and spirits are shown by their real in-game names instead of internal codes
-  (e.g. `rabbit_form` → Rabbit Form), in the spell list, the Forms / Outfit Spells sections and Spirit Shops.
-- **Korean menu:** Settings → Language & Translations → **한국어 (Korean)**.
-  - About 1,150 menu texts translated, using the game's own Korean terms
-    (다크 드래곤, 날개빛, 하늘양초, 여명의 섬, 안식처, 일일퀘스트 …).
-  - Spell and spirit names use the official Korean names (토끼 형태, 가리키는 양초장이 …).
-  - Uses a Korean font from your phone, since the loader's font has no Korean letters.
+**Official game names**
+- Spells and spirits are shown by their real in-game names instead of internal codes
+  (e.g. `rabbit_form` → Rabbit Form, `teleport_forest_elder` → Elder of Forest).
+- Used in the spell list, the Forms / Outfit Spells sections and the Spirit Shops lists.
+- Names for 181 spells and 387 spirits, taken from the game's own text in English and Korean.
+- Oreo Form has no Korean name in the game yet; 오레오 형태 is used.
+
+**Korean menu** (Settings → Language & Translations → **한국어 (Korean)**)
+- Built-in Korean translation of about 1,150 menu texts.
+- Realm, teleport, season and remaining menu labels translated, including the spell type filter.
+- Terms revised three times, ending on the game's own official Korean:
+  1. Sky Planner terms (영혼 for spirits, spirit names, 메너티).
+  2. Community glossary terms (날개빛, 지식의 도서관, 제스처, 영혼의 문).
+  3. The game's own text, where it differs: 다크 드래곤 (Krill), 하늘양초 (Ascended Candle),
+     여명의 섬 (Isle of Dawn), 안식처 (Home), 어둠의 식물, 어둠의 파편, 일일퀘스트, 시즌양초, 시즌패스,
+     의상 주문, 은둔자의 언덕, 새들의 정원 마을 and others (53 texts).
+- Korean letters are drawn with a Korean font from the phone (Noto CJK, Samsung, Nanum or Droid),
+  because the loader's own font has none. Only used while Korean is selected.
+
+**Updates**
+- First version that could update through Canvas (from the source repository; replaced by 0.25.7).
+- Before this, the mod's update link pointed at Catyro's repository.
+
+**Behind the scenes**
+- Source and README updated for Sky 0.35.2; `release/libTSM.so` replaced with the 0.35.2 build.
+- Build re-embeds the mod config whenever it changes (version bumps).
+- Local build copies are no longer tracked.
 
 ## 0.25.5 — Sky 0.35.2 (2026-10-31)
 
-- Updated for **Sky 0.35.2**.
-- **TSM login restored**, so features that need it work again: auto / semi winged light, auto / semi Eden,
-  daily quests and events.
-- **Spells tab:**
-  - Bunny, Oreo, Chibi and Crab quick forms fixed (Bunny no longer picks the Crabbit door spell).
-  - Spell list sorted by name, with a type filter: All / Forms / Outfits / Glow / Trails / Other.
-  - Spell Sharing section removed; the long form list under Form Duration is hidden.
-- **Semi Candle Run:** only lists candles that give wax.
-- **Music sheet playback:** chord notes now play together.
+**Game update**
+- All 94 game addresses ported from Sky 0.35.1 to **0.35.2**.
 
-### Known issues
-- Semi Eden may not deposit or collect winged light, and Reload Daily Quests may fail.
+**TSM login**
+- TSM login restored, so features that need it can work again: auto / semi winged light,
+  auto / semi Eden, daily quests and events.
+- Every TSM server request is written to the log, to find what still fails.
+- Progression features whose game address isn't found are skipped instead of breaking.
+
+**Spells tab**
+- Bunny, Oreo, Chibi quick forms fixed: exact spell names are matched first, and Bunny no longer picks
+  the Crabbit door spell. Wider match for Oreo.
+- Spell Sharing section removed.
+- The long form spell list between Form Duration and Outfit Spells is hidden.
+- Spell list sorted by name, with a type filter: All / Forms / Outfits / Glow / Trails / Other.
+- When the TSM server's spell list isn't available, the game's own spell list is used.
+
+**Semi Candle Run**
+- Only candles that give wax are listed (strict check). Several filter experiments in between —
+  either flag, an "Include Extra Candles" toggle, filters A–D, adding candles from groups not loaded
+  yet — were tried and removed; Filter A (strict) is kept.
+
+**Music**
+- Sheet playback plays chord notes together.
+
+**Known issues**
+- Semi Eden may not deposit or collect winged light.
+- Reload Daily Quests may fail.
 
 ## 0.25.4 — Sky 0.35.1 (2026-10-31)
 
-- First update of the mod for **Sky 0.35.1**.
-- **Spells tab without TSM login:** the spell list is read from the game itself.
-- **Forms and Outfit Spells:** bunny, oreo, chibi, crab and outfit spells with a chosen duration (10–600 s),
-  live countdown, early end and automatic expiry. Star pin spells are left out.
-- **Auto Complete Quests:** finishes open daily quests, including waiting quests, and keeps completing new ones.
+**Game update**
+- First update of the mod for **Sky 0.35.1** (build 423272), with game addresses re-found.
+- Restored: teleports (candles, dark plants, dyes, winged light), camera (Free Zoom, FPV, Drone),
+  World group, relationship abilities, Anti-AFK, Never Drown, Ethereal Avatar, Broken Neck,
+  social / ESP lists.
 
-### Not working in this version
-- Bubble / Rainbow Trails (not found in the game anymore), Pause UI Animations.
-- Features that need the TSM login (fixed in 0.25.5).
+**Auto Complete Quests**
+- Finishes open daily quests, including waiting / timed quests like "watch the tree".
+- Keeps completing new quests while on, and retries on every level change.
+
+**Spells tab**
+- Works without TSM login: the spell list is read from the game itself. Placeables are no longer
+  behind the login screen.
+- **Forms** and **Outfit Spells** sections: bunny, oreo, chibi, crab and outfit spells with a chosen
+  duration (10–600 s), live countdown, early end and automatic expiry; one spell per section.
+- Quick Bunny / Oreo / Crab / Chibi buttons; spell tracking clears when you leave the session.
+- Both sections sit inside the scrolling spell list, so the other spells can still be reached.
+- Star pin spells are left out of these sections. Some forms are visible to other players;
+  outfit spells only to you.
+
+**Not working in this version**
+- Bubble / Rainbow Trails (no longer in the game), Pause UI Animations.
+- Features that need the TSM login (restored in 0.25.5).
+
+**Behind the scenes**
+- README with install steps, feature status and build instructions.
+- Update notes with the full address table; mod config set to 0.25.4.
+- An extra, duplicate Forms module was merged into the existing form spells feature.
