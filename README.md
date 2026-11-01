@@ -39,6 +39,13 @@ Settings → Language & Translations → **한국어 (Korean)**. Spell and spiri
 - **thatgamecompany**: Sky: Children of the Light, and the official English and Korean spell and spirit
   names shown in the menu.
 
+## Permission
+
+These builds are updated with permission from **Catyro** (asked on Discord, November 2026), whose TSM fork
+these updates build on. XeTrinityz, the original author and copyright holder, has retired from TSM and
+has not been reached yet; this note will be updated if they reply. If you are XeTrinityz or the TSM team
+and want these builds changed or removed, please open an issue in this repository.
+
 ## License
 
 That Sky Mod is distributed under the original author's license, included unchanged in
