@@ -16,6 +16,10 @@ the newest release when its version is higher than the installed one.
 
 Each release is published automatically when `libTSM.so` and `VERSION` are updated on `main`.
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for what changed in each version.
+
 ## Korean
 
 Settings → Language & Translations → **한국어 (Korean)**. Spell and spirit names use the game's official names.
