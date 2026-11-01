@@ -1,7 +1,8 @@
 # Changelog
 
 Unofficial That Sky Mod (TSM) builds for Sky: Children of the Light on Android (Canvas / Sky Modloader).
-All credits for the mod go to the original TSM makers.
+All credits for the mod go to the original TSM makers: **XeTrinityz and the TSM team**
+([XeTrinityz/ThatSkyMod-Android](https://github.com/XeTrinityz/ThatSkyMod-Android)). See the README for full credits.
 
 This list covers every change made in the source repository (That-Sky-Mod-Temp-Updates, private),
 grouped by version. "Behind the scenes" items don't change how the mod works in the game.
