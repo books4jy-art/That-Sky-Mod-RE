@@ -9,6 +9,12 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.25.8 — Sky 0.35.2 (2026-11-13)
+
+- **Fix:** "Shout Cry" and "Shout Heart" (Player → Expressions) played each other's reaction. The game's shout
+  types are 1 Heart, 2 Shock, 3 Touched (cry), 4 Light; the two buttons now send 3 and 1. Found while checking the
+  same types in Offset Lab (type 0, Default, crashes the game and is never sent).
+
 ## 0.25.7 — Sky 0.35.2 (2026-11-01)
 
 - Updates now come from this public repository (That-Sky-Mod-RE): tap the mod's update button in Canvas
