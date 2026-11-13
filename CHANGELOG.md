@@ -9,6 +9,16 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.26.0 — Sky 0.35.2 (2026-11-13)
+
+- **Rainbow Trails** (Player) works again: it gives you the game's `trail_rainbow` spell on your screen (10 hours;
+  turning it off removes it), as Offset Lab does. The old switch had no game address since Sky 0.35.1.
+- **Bubble Trails** (Player) works again as a substitute: turning it on places the game's bubble zone
+  (HubbaBubbaZone, size 5) where you stand, as Offset Lab does; it stays until you change level.
+- **Fix:** Disable Joinable (Social) wrote to address 0, the start of the game library, because its game address
+  wasn't found for 0.35.1 / 0.35.2. It now skips that write; its request to the server is unchanged.
+- (0.25.10 was built but not released; its fixes are in 0.26.0.)
+
 ## 0.25.9 — Sky 0.35.2 (2026-11-13)
 
 - **Unlock All Relationship Abilities** (Unlocks) now also unlocks the friendship abilities for **strangers**:
