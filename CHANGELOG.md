@@ -9,6 +9,13 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.25.9 — Sky 0.35.2 (2026-11-13)
+
+- **Unlock All Relationship Abilities** (Unlocks) now also unlocks the friendship abilities for **strangers**:
+  the player menu's "is this player my friend" check answers yes, so a player you haven't befriended gets the
+  same abilities a friend does. Ported from Offset Lab (one instruction at 0x1D97D6C, checked before it's
+  patched and put back when the toggle is turned off).
+
 ## 0.25.8 — Sky 0.35.2 (2026-11-13)
 
 - **Fix:** "Shout Cry" and "Shout Heart" (Player → Expressions) played each other's reaction. The game's shout

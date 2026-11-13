@@ -1,6 +1,7 @@
 Unofficial That Sky Mod update for Sky 0.35.2 (Android, Canvas / Sky Modloader).
 
-- Fix: "Shout Cry" and "Shout Heart" played each other's reaction (the game's shout types are 1 Heart,
-  2 Shock, 3 Touched/cry); now each button plays its own reaction.
+- Unlock All Relationship Abilities now also works on strangers: tap a player you haven't befriended and their
+  menu offers the friendship abilities (hold hands, high five, hug, carry...) as it does for a friend.
+  Ported from Offset Lab.
 
 That Sky Mod is made by XeTrinityz and the TSM team. Unofficial build; see the README for credits.
