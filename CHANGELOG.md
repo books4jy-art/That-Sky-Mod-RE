@@ -9,6 +9,20 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.26.2 — Sky 0.35.2 (2026-11-14)
+
+- **Fix: TSM's server requests all failed with "400 Bad Request".** `ApiClient` put `Host` and `User-Agent` in the
+  request headers and `HttpClient` added its own copies, so every request carried two `Host` headers; the server
+  rejects that ("Invalid :authority", checked against the live server). Defaults are now only added when the caller
+  hasn't set them, so the game's own User-Agent is the one sent. This fixes Wing Light collect / drop / refresh and
+  every other feature that uses the account API (quests, collectibles, shop, social, Eden, daily quests).
+- **Fix: Auto Burn Plants / Auto Burn Dyes wouldn't turn on.** Their addresses (0x15BAF90 / 0x15BB004 / 0x15BB07C,
+  from TheVoid) were never moved to Sky 0.35.2, so the instruction check found nothing and the switch stayed off.
+  The same `ldr s0, [xN, #0x248]` instructions are at 0x15BB0C0 / 0x15BB134 / 0x15BB1AC in 0.35.2 (+0x130).
+- **Auto Wax Tools run turns on the burn switches.** Starting a run switches on Auto Burn Candles (and Auto Burn
+  Plants with "Include plants"), so they show as on; the run's own copies of those patches then find the code
+  already patched and add nothing. Finishing or canceling puts both switches back to their earlier state.
+
 ## 0.26.1 — Sky 0.35.2 (2026-11-14)
 
 - **New: Skip Spirit Tree Prerequisites** (Unlocks → Temporary Unlocks), ported from Offset Lab 0.37.7 (confirmed
