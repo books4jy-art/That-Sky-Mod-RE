@@ -9,6 +9,14 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.26.1 — Sky 0.35.2 (2026-11-14)
+
+- **New: Skip Spirit Tree Prerequisites** (Unlocks → Temporary Unlocks), ported from Offset Lab 0.37.7 (confirmed
+  working in game on a seasonal spirit). It changes the game's "can this node be bought", "is the node before it
+  owned" and seasonal tier checks (13 code words, each checked against Sky 0.35.2 first; if any doesn't match,
+  nothing changes) and sets the game's tier byte 0x34B4600. Not saved: off every time the game starts. Purchases
+  still go to the server.
+
 ## 0.26.0 — Sky 0.35.2 (2026-11-13)
 
 - **Rainbow Trails** (Player) works again: it gives you the game's `trail_rainbow` spell on your screen (10 hours;
