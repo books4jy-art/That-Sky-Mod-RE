@@ -9,6 +9,19 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.26.4 — Sky 0.35.2 (2026-11-14)
+
+- **New: Change Server** (Teleport → Dynamic). A log showed that Reload Level keeps the same game server (no new
+  connection between three reloads), and that a new server is only assigned after the shared connection drops
+  (in a private place). Change Server goes Home (TTitleGate, like the Home button), waits 4 s, changes back to the
+  same level and teleports you to where you stood. Runs in its own thread, so it works with the menu closed.
+
+## 0.26.4 — Sky 0.35.2 (2026-11-14)
+
+- **Skip Spirit Tree Prerequisites** (Unlocks): new description. The switch only changes what the game lets you
+  select; buying a node out of order or above your tier is refused by the server, and the game then shows
+  "game data corrupted" (restart the game to clear it). Reported in game on 2026-11-14.
+
 ## 0.26.3 — Sky 0.35.2 (2026-11-14)
 
 - **Fix: Relog didn't do anything** (Wing Light "Relog now", Settings → Account). The account fields were 0.33.7
