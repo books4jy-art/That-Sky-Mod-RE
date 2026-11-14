@@ -9,6 +9,15 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.26.3 — Sky 0.35.2 (2026-11-14)
+
+- **Fix: Relog didn't do anything** (Wing Light "Relog now", Settings → Account). The account fields were 0.33.7
+  values (0x1430 / 0x143C / 0x1440) and wrote into other fields of the account object in 0.35.2. The game's own
+  logout (0xDFC110) and account switch (0xE020A0) show the 0.35.2 layout: loading state 0x14B4 (4 bytes; 0 starts
+  the login again, 0x1C = loaded), login type 0x14C0 (4 bytes; logged out is now 14, was 12), "should restart"
+  byte 0x14C4. TSM now uses those (4-byte writes for the two state fields). Also fixes account switching and new
+  local accounts. Login types 12 and 13 (added after 0.33.7) show as "Other".
+
 ## 0.26.2 — Sky 0.35.2 (2026-11-14)
 
 - **Fix: TSM's server requests all failed with "400 Bad Request".** `ApiClient` put `Host` and `User-Agent` in the
