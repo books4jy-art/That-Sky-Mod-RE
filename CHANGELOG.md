@@ -15,9 +15,10 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
   connection between three reloads), and that a new server is only assigned after the shared connection drops
   (in a private place). Change Server goes Home (TTitleGate, like the Home button), waits 4 s, changes back to the
   same level and teleports you to where you stood. Runs in its own thread, so it works with the menu closed.
-
-## 0.26.4 — Sky 0.35.2 (2026-11-14)
-
+- **New: Apartment Hopping** (Teleport → Dynamic, off at start). When you enter an apartment without joining a
+  friend, the game sends you to your own apartment ("boot self", bl 0x1A7BB6C at 0x1DF9CD0). The switch skips that
+  call (original word checked first, put back when off), so Change Server can take you through other players'
+  apartments.
 - **Skip Spirit Tree Prerequisites** (Unlocks): new description. The switch only changes what the game lets you
   select; buying a node out of order or above your tier is refused by the server, and the game then shows
   "game data corrupted" (restart the game to clear it). Reported in game on 2026-11-14.

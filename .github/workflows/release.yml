@@ -1,6 +1,6 @@
 # Publishes libTSM.so as a GitHub release named after VERSION (e.g. v0.25.7).
 # Runs when libTSM.so or VERSION changes on main, or by hand from the Actions tab.
-# An existing release is left alone, so raise VERSION for every update.
+# An existing release keeps its file (only its notes are refreshed from NOTES.md), so raise VERSION for every update.
 # Canvas / Sky Modloader checks .../releases/latest, compares the tag with the installed
 # mod's version and offers the lib*.so asset as an update.
 name: Release libTSM.so
@@ -11,6 +11,7 @@ on:
     paths:
       - libTSM.so
       - VERSION
+      - NOTES.md
   workflow_dispatch:
 
 permissions:
@@ -29,7 +30,9 @@ jobs:
           test -s libTSM.so
           TAG="v$(tr -d '[:space:]' < VERSION)"
           if gh release view "$TAG" >/dev/null 2>&1; then
-            echo "Release $TAG already exists; raise VERSION to publish a new one."
+            # Only the notes are refreshed; the published libTSM.so is left as it is.
+            gh release edit "$TAG" --notes-file NOTES.md
+            echo "Release $TAG already exists; notes updated. Raise VERSION to publish a new build."
             exit 0
           fi
           gh release create "$TAG" libTSM.so \
