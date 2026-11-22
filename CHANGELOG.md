@@ -9,6 +9,13 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.26.15 — Sky 0.35.2 (2026-11-22, released)
+
+0.26.12 plus the Crab Burrow mini menu.
+
+- **Crab Burrow is a collapsed mini menu** under Spawn Giant Crab (OPEN / CLOSE), its controls in a lighter panel
+  (window background +0.08) with rounded corners and an accent-colour border.
+
 ## 0.26.12 — Sky 0.35.2 (2026-11-22, released)
 
 Release of the changes confirmed in game since 0.26.4 (0.26.5–0.26.11 were test builds that weren't released).
