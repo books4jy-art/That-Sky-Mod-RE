@@ -9,6 +9,14 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.26.12 — Sky 0.35.2 (2026-11-22, released)
+
+Release of the changes confirmed in game since 0.26.4; 0.26.5–0.26.11 were test builds that weren't released).
+
+- **New: Crab burrow** (from 0.26.8/0.26.9; Neutral / Friendly / Dark moods).
+- **Fix: Disable Cutscenes** (from 0.26.10/0.26.11): writes the game's kAutoSkipAllTimelines byte and keeps it set.
+- **Fix: Auto Burn Plants / Dyes together** (from 0.26.5).
+
 ## 0.26.4 — Sky 0.35.2 (2026-11-14)
 
 - **New: Change Server** (Teleport → Dynamic). A log showed that Reload Level keeps the same game server (no new
