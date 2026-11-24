@@ -5,7 +5,7 @@ Not made by me! All credits go to the original TSM makers
 > These are unofficial builds that keep the mod running on newer Sky versions. They are not
 > made or supported by the original authors. See [Credits](#credits).
 
-Builds of the unofficial That Sky Mod (TSM) update for **Sky: Children of the Light 0.35.2** on Android
+Builds of the unofficial That Sky Mod (TSM) update for **Sky: Children of the Light 0.35.5** on Android
 (arm64-v8a), for **Canvas / Sky Modloader**.
 
 ## Install

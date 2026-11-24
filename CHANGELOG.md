@@ -9,6 +9,17 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.27.0 — Sky 0.35.5 (2026-11-24, released)
+
+0.26.17 moved to Sky 0.35.5 (tested in game: most features work).
+
+- **Sky 0.35.5 support.** Game addresses were found again by matching the game's code; object fields were checked
+  against the game's own field table. Changed in 0.35.5: level name (Game +0x958), avatar slot size (0x10CB0),
+  player id stride (0x5C40). Found by hand: piano hook, Camera snap, Birthday-hat krill, Unlimited fireworks.
+  Byte patterns updated: Free zoom, Super flight, Emote levels.
+- **Untested on 0.35.5:** Unlight Avatar (did not work in the first test; the game code it calls is unchanged, cause
+  not found yet), Kill Avatar, Break Elder Armor.
+
 ## 0.26.17 — Sky 0.35.2 (2026-11-24, released)
 
 0.26.15 plus the saved-outfit fix (confirmed in game).
