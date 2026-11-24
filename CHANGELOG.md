@@ -9,6 +9,14 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.26.17 — Sky 0.35.2 (2026-11-24, released)
+
+0.26.15 plus the saved-outfit fix (confirmed in game).
+
+- **Fix: Saved outfits.** The outfit-id → name table could be built before the outfit list was loaded and then
+  stayed empty, so every saved piece became "Unknown_<id>" and applying it did nothing. It now only counts as built
+  once names were loaded. Log lines "SaveOutfit: …" / "ApplyOutfit: …" show what is saved and applied.
+
 ## 0.26.15 — Sky 0.35.2 (2026-11-22, released)
 
 0.26.12 plus the Crab Burrow mini menu.
