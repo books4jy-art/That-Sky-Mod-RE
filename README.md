@@ -20,7 +20,8 @@ the newest release when its version is higher than the installed one.
 
 Each release is published automatically when `libTSM.so` and `VERSION` are updated on `main`.
 
-**Known issues (0.27.0, Sky 0.35.5):**
+**Known issues (0.27.4, Sky 0.35.5):**
+- **Pause UI** doesn't work.
 - **Unlock All** unlocks props and capes, but no longer shows emotes you don't own yet (it did on Sky 0.35.2).
 - **Unlight Avatar** didn't work in testing on Sky 0.35.5; Kill Avatar and Break Elder Armor are untested.
 

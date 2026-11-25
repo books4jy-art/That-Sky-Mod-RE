@@ -9,6 +9,21 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.27.4 — Sky 0.35.5 (2026-11-25, released)
+
+0.27.0 plus these fixes (0.27.1–0.27.3 were test builds that weren't released).
+
+- **Fix: Auto Wax Tools run waits for plants** (confirmed in game). At each plant cluster the run stays until the dark
+  plants have finished burning (their burn values stop changing for 2.5 s; at least 2 s, at most 25 s per cluster)
+  instead of leaving after a fixed 1 s. Log line "WaxRun: plant cluster N/M done (…)".
+- **Fix: Auto Eden deposits wing light** (confirmed in game). Each wing light is deposited with the deposit_id the
+  server sends for it (TSM's built-in table is only a fallback), and the account reloads at the end so the new wing
+  light and candles show without relogging. Log lines "AutoEden: …".
+- **Fix: Auto Complete Quests** no longer re-runs daily quests that are already done ("<quest>_quest_done") on every
+  level change (not confirmed in game yet).
+- **Saved outfits** work on Sky 0.35.5 (the 0.26.17 fix, confirmed again).
+- **Known issue:** Pause UI doesn't work on Sky 0.35.5.
+
 ## 0.27.0 — Sky 0.35.5 (2026-11-24, released)
 
 0.26.17 moved to Sky 0.35.5 (tested in game: most features work).
