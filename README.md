@@ -5,7 +5,7 @@ Not made by me! All credits go to the original TSM makers
 > These are unofficial builds that keep the mod running on newer Sky versions. They are not
 > made or supported by the original authors. See [Credits](#credits).
 
-Builds of the unofficial That Sky Mod (TSM) update for **Sky: Children of the Light 0.35.5** on Android
+Builds of the unofficial That Sky Mod (TSM) update for **Sky: Children of the Light 0.35.6** on Android
 (arm64-v8a), for **Canvas / Sky Modloader**.
 
 ## Install
@@ -20,10 +20,10 @@ the newest release when its version is higher than the installed one.
 
 Each release is published automatically when `libTSM.so` and `VERSION` are updated on `main`.
 
-**Known issues (0.27.4, Sky 0.35.5):**
+**Known issues (0.28.0, Sky 0.35.6):**
 - **Pause UI** doesn't work.
 - **Unlock All** unlocks props and capes, but no longer shows emotes you don't own yet (it did on Sky 0.35.2).
-- **Unlight Avatar** didn't work in testing on Sky 0.35.5; Kill Avatar and Break Elder Armor are untested.
+- **Unlight Avatar** didn't work in testing; Kill Avatar and Break Elder Armor are untested.
 
 ## Changelog
 

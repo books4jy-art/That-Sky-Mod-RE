@@ -9,6 +9,22 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.28.0 — Sky 0.35.6 (2026-11-26, released)
+
+0.27.4 moved to Sky 0.35.6 (build 433304), plus Social fixes (0.27.5–0.27.9 were test builds that weren't released).
+
+- **Sky 0.35.6 support.** Every game address, patch and byte pattern is unchanged from 0.35.5; version text and the
+  game build number (433304) updated.
+- **Fix: Social friend list loads by itself.** The panel treated "not loading" as "loaded", so the friend list (and
+  the Gift Hearts picker) stayed empty until Refresh. It now loads after login and retries every 5 s; Gift Hearts
+  loads friends when opened.
+- **Fix: Gift Hearts** reloads the account after sending, so the candle count updates without relogging.
+- **Fix: Korean friend names** show properly instead of "???" (their characters are added to the Korean font).
+- **Gift All Light** says "Light already sent to all N friends today" instead of "No friends to gift".
+- **Privacy:** the login session token is no longer written to the log.
+- **Known issues (unchanged):** Pause UI, Unlock All emotes and Unlight Avatar don't work; Kill Avatar and Break
+  Elder Armor are untested.
+
 ## 0.27.4 — Sky 0.35.5 (2026-11-25, released)
 
 0.27.0 plus these fixes (0.27.1–0.27.3 were test builds that weren't released).
