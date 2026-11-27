@@ -22,6 +22,7 @@ Each release is published automatically when `libTSM.so` and `VERSION` are updat
 
 **Known issues (0.28.0, Sky 0.35.6):**
 - **Pause UI** doesn't work.
+- **Convert Season Candles** is turned off: it has been unusable since Sky 0.35.1.
 - **Unlock All** unlocks props and capes, but no longer shows emotes you don't own yet (it did on Sky 0.35.2).
 - **Unlight Avatar** didn't work in testing; Kill Avatar and Break Elder Armor are untested.
 
