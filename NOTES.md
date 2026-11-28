@@ -1,10 +1,9 @@
 Unofficial That Sky Mod update for Sky 0.35.6 (Android, Canvas / Sky Modloader).
 
-- **Sky 0.35.6 support.**
-- **Fix: Social friend list** loads by itself again, so Gift Hearts shows your friends.
-- **Fix: Gift Hearts** reloads your account after sending, so your candle count updates.
-- **Fix: Korean friend names** show properly instead of "???".
-- **Gift All Light** now tells you when light was already sent to all your friends today.
+- **Fix: Timelines** (World) play again, and now list every timeline the current level has.
+- **Import Local Account** no longer accepts files that aren't account files.
+- **Change Server** should now put you in a different server (not confirmed yet).
+- **Convert Season Candles** is turned off: unusable since Sky 0.35.1.
 - **Known issues:** Pause UI doesn't work. Unlock All doesn't show emotes you don't own yet. Unlight Avatar doesn't
   work. Kill Avatar and Break Elder Armor are untested.
 

@@ -9,6 +9,24 @@ grouped by version. "Behind the scenes" items don't change how the mod works in 
 
 ---
 
+## 0.28.7 — Sky 0.35.6 (2026-11-28, released)
+
+0.28.0 plus these changes (0.28.1–0.28.6 were test builds that weren't released).
+
+- **Fix: Timelines** (World) play again (confirmed in game). The tab now lists the timelines the current level has
+  loaded (read from the game's timeline list, Game + 0x6A8) instead of old built-in name lists, in every level.
+  The game ignores names that aren't loaded, which is why the old lists did nothing. Log lines "Timelines: …".
+- **Convert Season Candles** is turned off and shown locked: unusable since Sky 0.35.1 (the ending cutscene no
+  longer sends the season-end request).
+- **Account Management:** the fallback folder used the wrong package name (git.artdeell.sml → git.artdeell.skymodloader);
+  opening the section logs one diagnostic line (paths and file names only). Relog confirmed in game.
+- **Import Local Account** rejects files that can't be account files (empty or over 1 KB; the game reads at most
+  1024 bytes of its login file) instead of saving anything you pick.
+- **Change Server** skips the game's previous-game record while rejoining, so the server doesn't put you back in
+  the same game; at Home it says it only works in other levels (not confirmed in game yet).
+- **Apartment Hopping** shows the real state when a patch write fails.
+- **Behind the scenes:** TSM's Lua queue logs scripts the game rejects ("Lua: script failed …").
+
 ## 0.28.0 — Sky 0.35.6 (2026-11-26, released)
 
 0.27.4 moved to Sky 0.35.6 (build 433304), plus Social fixes (0.27.5–0.27.9 were test builds that weren't released).
